@@ -1,0 +1,56 @@
+/* ========================================
+   APPROACH SECTION
+======================================== */
+
+.approach-section {
+  @extend %p-115;
+
+  @include media-down(tablet) {
+    padding-bottom: 5.6rem;
+  }
+  .approach-grid {
+    display: grid;
+    gap: 3.4rem;
+  }
+  .approach-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    .approach-number {
+      @extend %o-header--h3;
+      color: $interface-primary;
+      font-family: family(secondary);
+      font-weight: weight(light);
+    }
+    .approach-title {
+      @extend %o-header--h3;
+      color: $interface-primary;
+      font-family: family(secondary);
+      font-weight: weight(light);
+    }
+    .approach-text {
+      @extend %o-body-text;
+      color: rgba($interface-blue, 0.8);
+    }
+  }
+  .o-button-link {
+    margin-top: 3.6rem;
+    color: $interface-primary;
+
+    i {
+      color: $interface-yellow;
+      border-color: $interface-yellow;
+    }
+
+    @include media-down(tablet) {
+      margin-top: 2rem;
+    }
+  }
+}
+@media (min-width: 992px) {
+
+  .approach-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

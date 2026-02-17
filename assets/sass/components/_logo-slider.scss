@@ -1,0 +1,48 @@
+.logo-slider {
+  overflow: hidden;
+  padding-bottom: 12.5rem;
+
+  @include media-down(tablet) {
+    padding-bottom: 4rem;
+  }
+
+  .slider {
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .slider-track {
+    display: flex;
+    will-change: transform;
+  }
+
+  .slide {
+    flex: 0 0 20%; 
+
+    @include media-down(tablet) {
+      flex: 0 0 50%;
+    }
+
+    img {
+      width: 100%;
+      max-height: 11.8rem;
+      object-fit: contain;
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .slide {
+    flex: 0 0 20%;
+  }
+
+}
+@media (min-width: 1200px) {
+
+  .slide {
+    flex: 0 0 16.66%;
+  }
+
+}

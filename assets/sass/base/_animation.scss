@@ -1,0 +1,189 @@
+/* =====================================================
+   GLOBAL ANIMATION BASE
+===================================================== */
+
+.animation {
+  opacity: 0;
+  transition: all 400ms linear;
+}
+
+
+/* =====================================================
+   FADE + DIRECTION ANIMATIONS
+===================================================== */
+
+/* Fade from Right */
+.fade-right {
+  transform: translate3d(50px, 0, 0);
+}
+
+/* Fade from Left */
+.fade-left {
+  transform: translate3d(-50px, 0, 0);
+}
+
+/* Fade from Top */
+.fade-top {
+  transform: translate3d(0, -50px, 0);
+}
+
+/* Fade from Bottom */
+.fade-bottom {
+  transform: translate3d(0, 50px, 0);
+}
+
+/* Simple Fade */
+.fade-in {
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* Active State (When in viewport) */
+
+.fade-right.in-view,
+.fade-left.in-view,
+.fade-top.in-view,
+.fade-bottom.in-view,
+.fade-in.in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+/* =====================================================
+   ZOOM EFFECT ANIMATION
+===================================================== */
+
+.zoom-effect {
+  opacity: 0;
+  transform: scale(.92);
+  will-change: opacity, transform;
+
+  transition:
+    opacity 800ms cubic-bezier(.4,0,.2,1),
+    transform 800ms cubic-bezier(.4,0,.2,1);
+
+  &.in-view {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* =====================================================
+   TEXT SPLIT / TITLE ANIMATION
+===================================================== */
+
+.split-line,
+.titleanimation > div {
+  overflow: hidden;
+}
+
+.animation-element {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    // animation-fill-mode: both;
+
+    &.animation-element-exfast {
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in-out;
+    }
+
+    &.animation-element-fast {
+        animation-duration: 1.2s;
+        animation-timing-function: ease-in-out;
+    }
+
+    &.animation-element-slow {
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+    }
+
+    &.animation-element-exslow {
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.in-view{
+    &.fade{
+        -webkit-animation-name: fade;
+        animation-name: fade;
+    }
+    &.fadeRight{
+        -webkit-animation-name: fadeRight;
+        animation-name: fadeRight;
+    }
+    &.fadeLeft{
+        -webkit-animation-name: fadeLeft;
+        animation-name: fadeLeft;
+    }
+    &.fadeUp{
+        -webkit-animation-name: fadeUp;
+        animation-name: fadeUp;
+    }
+    &.fadeDown{
+        -webkit-animation-name: fadeDown;
+        animation-name: fadeDown;
+    }
+    &.zoom {
+        -webkit-animation-name:zoomIn;
+        animation-name:zoomIn
+    }
+}
+  
+@keyframes fade{
+0%{opacity:0}
+100%{opacity:1}
+}
+
+@keyframes fadeRight{
+0%{
+    opacity:0;-webkit-transform:translate3d(100px,0,0);transform:translate3d(100px,0,0)
+}
+to{
+    opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)
+}
+}
+  
+  
+@keyframes fadeLeft{
+0%{
+    opacity:0;-webkit-transform:translate3d(-100px,0,0);transform:translate3d(-100px,0,0)
+}
+to{
+    opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)
+}
+}
+
+@keyframes fadeUp{
+0%{
+    opacity:0;-webkit-transform:translate3d(0,100px,0);transform:translate3d(0,100px,0)
+}
+to{
+    opacity:1;-webkit-transform:none;transform:none;
+}
+}
+  
+  
+@keyframes fadeDown{
+0%{
+    opacity:0;-webkit-transform:translate3d(0,-100px,0);transform:translate3d(0,-100px,0)
+}
+to{
+    opacity:1;-webkit-transform:none;transform:none;
+}
+}
+
+@-webkit-keyframes zoomIn{
+    0%{
+        opacity:0;
+        -webkit-transform:scale3d(.3,.3,.3);
+        transform:scale3d(.3,.3,.3)
+    }
+    50%{
+        opacity:1
+    }
+}

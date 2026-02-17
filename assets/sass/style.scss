@@ -1,0 +1,21 @@
+@import 'abstracts/layout';
+@import 'abstracts/index';
+
+// Settings:
+
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/button';
+@import 'base/type';
+@import 'base/animation';
+
+// components:
+
+@import 'components/header';
+@import 'components/banner';
+@import 'components/approch';
+@import 'components/who-we-are';
+@import 'components/logo-slider';
+@import 'components/services';
+@import 'components/cta';
+@import 'components/footer';

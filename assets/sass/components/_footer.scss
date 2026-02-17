@@ -1,0 +1,155 @@
+.main-footer {
+  background-color: $interface-blue;
+  color: $interface-white;
+  padding: 8rem 0 3.2rem;
+
+  @include media-down(tablet) {
+    text-align: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    // Tablet & Desktop
+    @media (min-width: 768px) {
+      grid-template-columns: 2fr 0.8fr 0.5fr 0.8fr;
+    }
+
+    /* Logo Images */
+
+    .mobile-image {
+      display: none;
+      height: 85px;
+      object-fit: contain;
+
+      @include media-down(tablet) {
+        display: block;
+      }
+    }
+
+    .desktop-image {
+      display: block;
+
+      @include media-down(tablet) {
+        display: none;
+      }
+    }
+  }
+
+
+ .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .navigation-title {
+      color: $interface-yellow;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      font-family: family(secondary);
+      font-weight: weight(light);
+      text-transform: capitalize;
+      letter-spacing: -0.02em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 12px;
+
+        a {
+          color: $interface-white;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          font-weight: weight(regular);
+          letter-spacing: 0.01em;
+          font-style: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $interface-yellow;
+          }
+        }
+      }
+    }
+
+    address,
+    .phone {
+      color: $interface-white;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-weight: weight(regular);
+      letter-spacing: 0.01em;
+      font-style: normal;
+    }
+    .social-icons {
+      display: flex;
+      gap: 27px;
+
+      @include media-down(tablet) {
+        margin: auto;
+      }
+
+      a {
+        color: $interface-yellow;
+        font-size: 2.6rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  .brand-info {
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .logo-symbol {
+        font-size: 2.5rem;
+        font-weight: serif;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 0.75rem;
+        opacity: 0.8;
+        margin: 5px 0 0;
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 6.3rem;
+    padding-top: 3.2rem;
+    border-top: 1px solid $interface-white;
+
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.0.2rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

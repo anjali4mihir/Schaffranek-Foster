@@ -1,0 +1,318 @@
+$image-directory: '../images/';
+
+html {
+  box-sizing: border-box;
+  height: auto;
+  font-size: $font-size-base;
+  margin-top: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: family(primary) !important;
+  font-weight: weight(regular);
+  font-size: size(paragraph, large);
+  line-height: lineheight(paragraph, large);
+  overflow-x: hidden;
+  position: relative; 
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin-top: 0;
+}
+
+.widget {
+  margin: 0;
+}
+*:focus {
+  outline: none !important;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a,
+a:focus, a:hover {
+  text-decoration: none;
+}
+button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.btn-check:focus + .btn,
+.btn:focus,
+.btn-primary:active:focus {
+  box-shadow: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+blockquote,
+body,
+caption,
+dd,
+dl,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+legend,
+ol,
+p,
+pre,
+table,
+td,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+a:visited {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+.o-text,
+%o-text {
+  font-family: family(primary);
+}
+
+.wpb_button,
+.wpb_content_element,
+ul.wpb_thumbnails-fluid > li {
+  margin-bottom: 0 !important;
+}
+
+figure,
+figure > div {
+  width: 100%;
+}
+.post,
+.page {
+  margin: 0;
+}
+
+.entry-content{
+  position: relative;
+  overflow: hidden;
+}
+
+.vc_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+  > div {
+    float: none;
+  }
+
+  .vc_column-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.entry-content .vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner, .entry-content .vc_row-has-fill>.vc_column_container>.vc_column-inner{
+  padding-top: 0;
+}
+
+.container {
+  max-width: 169rem;
+  margin: 0 auto !important;
+
+  @include media-down(desktop-large) {
+    max-width: 145rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  @include media-down(desktop) {
+    max-width: 133rem;
+  }
+
+  @include media-down(laptop-large) {
+    max-width: 128rem;
+  }
+  @include media-down(laptop) {
+    max-width: 120rem;
+  }
+
+  @include media-down(tablet-large) {
+    max-width: 100%;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  @include media-down(tablet) {
+    max-width: 100%;
+  }
+
+}
+
+
+%o-header--h1,
+.o-header--h1 {
+  font-size: size(title, h1);
+  line-height: lineheight(title, h1);
+
+  @include media-down(desktop-large) {
+    font-size: size(title, h1-desktop);
+    line-height: lineheight(title, h1-desktop);
+  }
+  @include media-down(laptop-large) {
+    font-size: size(title, h1-laptop-large);
+    line-height: lineheight(title, h1-laptop-large);
+  }
+  @include media-down(laptop) {
+    font-size: size(title, h1-laptop);
+    line-height: lineheight(title, h1-laptop);
+  }
+  @include media-down(tablet-large) {
+    font-size: size(title, h1-tablet-large);
+    line-height: lineheight(title, h1-tablet-large);
+  }
+  @include media-down(tablet) {
+    font-size: size(title, h1-tablet);
+    line-height: lineheight(title, h1-tablet);
+  }
+  @include media-down(tablet) {
+    font-size: size(title, h1-mobile);
+    line-height: lineheight(title, h1-mobile);
+  }
+}
+
+%o-header--h2,
+.o-header--h2 {
+  font-size: size(title, h2);
+  line-height: lineheight(title, h2);
+
+  @include media-down(desktop-large) {
+    font-size: size(title, h2-desktop-large);
+    line-height: lineheight(title, h2-desktop-large);
+  }
+  @include media-down(desktop) {
+    font-size: size(title, h2-desktop);
+    line-height: lineheight(title, h2-desktop);
+  }
+  @include media-down(laptop-large) {
+    font-size: size(title, h2-laptop);
+    line-height: lineheight(title, h2-laptop);
+  }
+  @include media-down(tablet-large) {
+    font-size: size(title, h2-tablet);
+    line-height: lineheight(title, h2-tablet);
+  }
+  @include media-down(mobile) {
+    font-size: size(title, h2-mobile);
+    line-height: lineheight(title, h2-mobile);
+  }
+}
+
+%o-header--h3,
+.o-header--h3 {
+  font-size: size(title, h3);
+  line-height: lineheight(title, h3);
+
+  @include media-down(desktop-large) {
+    font-size: size(title, h3-desktop);
+    line-height: lineheight(title, h3-desktop);
+  }
+  @include media-down(laptop-large) {
+    font-size: size(title, h3-laptop);
+    line-height: lineheight(title, h3-laptop);
+  }
+  @include media-down(tablet-large) {
+    font-size: size(title, h3-tablet-large);
+    line-height: lineheight(title, h3-tablet-large);
+  }
+  @include media-down(tablet) {
+    font-size: size(title, h3-tablet);
+    line-height: lineheight(title, h3-tablet);
+  }
+  @include media-down(mobile) {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+}
+
+%o-header--h4,
+.o-header--h4 {
+  font-size: size(title, h4);
+  line-height: lineheight(title, h4);
+
+  @include media-down(desktop-large) {
+    font-size: size(title, h4-desktop);
+    line-height: lineheight(title, h4-desktop);
+  }
+
+  @include media-down(tablet-large) {
+    font-size: size(title, h4-tablet);
+    line-height: lineheight(title, h4-tablet);
+  }
+  @include media-down(mobile) {
+    font-size: size(paragraph, medium);
+    line-height: lineheight(paragraph, medium);
+  }
+}
+
+%o-header--h5,
+.o-header--h5 {
+  font-size: size(title, h5);
+  line-height: lineheight(title, h5);
+
+   @include media-down(tablet) {
+    font-size: size(title, h5);
+  line-height: lineheight(title, h5);
+  }
+}
+
+%o-header--h6,
+.o-header--h6 {
+  font-size: size(title, h6);
+  line-height: lineheight(title, h6);
+
+  @include media-down(tablet-large) {
+    font-size: size(title, h64-tablet);
+    line-height: lineheight(title, h6-tablet);
+  }
+}
+
+%o-body-text,
+.o-body-text {
+  font-size: size(body, text);
+  line-height: lineheight(body, text);
+}
+
+%p-115,
+.p-115 {
+  padding-top: 11.5rem;
+  padding-bottom: 11.5rem;
+
+  @include media-down(tablet) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+

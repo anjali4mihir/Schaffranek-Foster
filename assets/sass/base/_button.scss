@@ -1,0 +1,81 @@
+.o-button {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: $interface-primary;
+    font-weight: weight(semibold);
+    letter-spacing: 0.04em;
+    background-color: $interface-yellow;
+    padding: 1.6rem 2.2rem;
+    border-radius: 10rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    @include media-down(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        padding: 1.7rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+.o-button-white {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: $interface-primary;
+    font-weight: weight(bold);
+    letter-spacing: 0.04em;
+    background-color: $interface-white;
+    padding: 1.6rem 2.2rem;
+    border-radius: 10rem;
+    letter-spacing: 0.01em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    @include media-down(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+}
+.o-button-link {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: $interface-white;
+    font-weight: weight(bold);
+    letter-spacing: 0.04em;
+    border-radius: 10rem;
+    letter-spacing: 0.01em;
+    gap: 0.8rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+
+    @include media-down(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+
+    i {
+        font-size: 0.7rem;
+        line-height: 0.7rem;
+        color: $interface-white; 
+        border: 1px solid $interface-white;
+        border-radius: 100%;
+        padding: 0.4rem;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        color: $interface-yellow; 
+        i {
+            background-color: $interface-white;
+            color: $interface-primary; 
+            transform: translateX(5px); 
+        }
+    }
+}

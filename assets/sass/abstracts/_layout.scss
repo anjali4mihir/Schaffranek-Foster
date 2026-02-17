@@ -1,0 +1,62 @@
+// Breakpoints:
+$breakpoint-small: 360px; // ~ small devices
+$breakpoint-mobile: 480px; // ~ mobile
+$breakpoint-tablet: 768px;  // ~ tablet
+$breakpoint-tablet-large: 1024px; // ~ tablet large
+$breakpoint-laptop: 1280px;     // ~ laptop
+$breakpoint-laptop-large: 1360px; // ~ laptop large
+$breakpoint-desktop: 1440px; // ~ desktop
+$breakpoint-desktop-large: 1450px; // ~ desktop large
+$breakpoint-desktop-exlarge: 1601px; // ~ desktop exlarge 
+
+$mediabreakpoints: (
+  xsmall: 0,
+  mobile-small: $breakpoint-small,
+  mobile: $breakpoint-mobile,
+  tablet: $breakpoint-tablet,
+  tablet-large: $breakpoint-tablet-large,
+  laptop: $breakpoint-laptop,
+  laptop-large: $breakpoint-laptop-large,
+  desktop: $breakpoint-desktop,
+  desktop-large: $breakpoint-desktop-large,
+  desktop-exlarge: $breakpoint-desktop-exlarge,
+);
+
+
+$container-max-widths: (
+  tablet: 1000px,
+  tablet-large: 1190px,
+  laptop-large: 1280px,
+  desktop: 1280px,
+  desktop-large: 1470px
+) !default;
+
+
+$enable-grid-classes:       true !default;
+
+
+// Grid:
+$grid-columns: 12 !default;
+$grid-gutter-width:  30px !default;
+$grid-row-columns: 6 !default;
+$grid-gap-cols: 5.75;
+
+
+// z-index
+$z-index: (
+  under: -1,
+  default: 0,
+  float: 1,
+  nav: 2,
+  search: 3,
+  modal: 6,
+);
+
+@function zindex($key) {
+  @if map-has-key($z-index, $key) {
+    @return map-get($z-index, $key);
+  }
+  @warn 'Unknown `#{$key}` in $z-index.';
+  @return null;
+}
+

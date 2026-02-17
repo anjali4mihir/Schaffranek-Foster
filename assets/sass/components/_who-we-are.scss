@@ -1,0 +1,186 @@
+.parallax-help {
+  position: relative;
+  padding: 13rem 0 12.5rem;
+
+  @include media-down(tablet) {
+    padding: 4.1rem 0 4rem;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+      180deg,
+      #FAFAFA 0%,
+      #FFFFFF 100%
+    );
+  }
+
+
+  .help-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    z-index: 2;
+  }
+
+
+  .help-image {
+
+    position: relative;
+    overflow: hidden;
+
+    @include media-down(tablet) {
+      height: 37.4rem;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+
+      background: linear-gradient(
+        189.74deg,
+        rgba(59, 69, 98, 0) 40.21%,
+        #30384D 85.62%
+      );
+    }
+
+    .parallax-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      transform: scale(1.2);
+    }
+
+    .parallax-image {
+      position: relative;
+      z-index: 2;
+      transform: scale(1.1);
+    }
+
+    .parallax-overlay {
+      position: absolute;
+      bottom: 44px;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      max-width: 48.4rem;
+      z-index: 3;
+
+      @include media-down(tablet) {
+        max-width: 100%;
+        padding: 2rem 2rem 0 2rem;
+      }
+
+      p {
+        position: relative;
+
+        @extend %o-header--h5;
+        color: $interface-white;
+        font-family: family(secondary);
+        font-weight: weight(light);
+        letter-spacing: -0.02em;
+
+        @include media-down(tablet) {
+          font-size: 1.6rem;
+          line-height: 1.2em;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: -8.5rem;
+          top: 1.6rem;
+
+          width: 6.5rem;
+          height: 1px;
+          background-color: $interface-yellow;
+        }
+      }
+    }
+  }
+
+  .image-overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 300px;
+
+    color: white;
+    font-size: 14px;
+  }
+
+  .help-content {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    .who-we-are {
+      @extend %o-header--h3;
+      color: $interface-primary;
+      font-weight: weight(light);
+      letter-spacing: -0.02em;
+    }
+
+    .main-title {
+      @extend %o-header--h2;
+      color: $interface-primary;
+      font-family: family(secondary);
+      font-weight: weight(light);
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      @extend %o-body-text;
+      color: rgba($interface-grey, 0.6);
+      font-weight: weight(light);
+      letter-spacing: 0.01em;
+    }
+
+    .o-button {
+      display: inline-block;
+      width: fit-content;
+      padding: 3rem 5.2rem;
+
+      @include media-down(tablet) {
+        width: 100%;
+        padding: 1.7rem;
+      }
+    }
+
+  }
+
+}
+@media (min-width: 992px) {
+
+  .parallax-help {
+
+    .help-grid {
+      flex-direction: row;
+      align-items: center;
+      gap: 5.6rem;
+    }
+
+    .help-image-wrapper {
+      flex: 1;
+    }
+
+    .help-content {
+      flex: 1;
+    }
+
+  }
+
+}
